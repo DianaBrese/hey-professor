@@ -1,0 +1,18 @@
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep ".php\{0,1\}$")
+
+#Run php stan
+.vendor/bin/phpstan
+if [$? -ne 0]; then
+    echo "Opa! Deu ruim aqui com o PHPSTAN. Arrume antes de continuar...";
+    exit 1;
+fi;
+
+
+#Format any file that was altered using Laravel Pint
+for FILE in $STAGED_FILES 
+do
+
+    .vendor/bin/pint "${FILE}"
+    git add "${FILE}"
+
+done;
