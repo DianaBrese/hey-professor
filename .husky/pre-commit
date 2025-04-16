@@ -15,9 +15,9 @@ fi;
 #Format any file that was altered using Laravel Pint
 for FILE in $STAGED_FILES 
 do
-    vendor/bin/pint "${FILE}" > /dev/null >&1;
-    git add "${FILE}"
-    echo "Arquivos foram formatados";
+    vendor/bin/pint "${FILE}";
+    git add "${FILE}";
+  
 
 done;
 
