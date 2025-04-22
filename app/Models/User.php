@@ -13,7 +13,7 @@ class User extends Authenticatable implements MustVerifyEmail
     use HasApiTokens;
     use HasFactory;
     use Notifiable;
-    //user model
+    //Teste para ver se o pre-commit funciona
     /**
      * The attributes that are mass assignable.
      *
