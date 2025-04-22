@@ -44,5 +44,5 @@ jobs:
       run: vendor/bin/phpstan analyse
       
     - name: Execute Laravel Pint
-      run: vendor/bint/pint --test
+      run: vendor/bin/pint --test
   
