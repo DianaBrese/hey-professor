@@ -14,6 +14,7 @@ class User extends Authenticatable implements MustVerifyEmail
     use HasFactory;
     use Notifiable;
 
+    //Teste para ver se o pre-commit funciona
     /**
      * The attributes that are mass assignable.
      *
